@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="A simple image uploader" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Image Uploader</title>
+	</head>
+	<body>
+		<div class="box" id="box">
+			<h1 class="heading-1">Upload your image</h1>
+			<p class="legend">File should be jpeg, png, ...</p>
+			<div class="drag-drop" id="drop-zone">
+				<img
+					src="img/image.svg"
+					alt="Image Placeholder"
+					class="drag-drop__img"
+				/>
+				<p class="drag-drop__legend">Drag & Drop your image here</p>
+			</div>
+			<p class="or">Or</p>
+			<label for="input-file" class="btn">Choose a file</label>
+			<input type="file" id="input-file" class="hidden" />
+		</div>
+		<script src="js/app.js"></script>
+	</body>
+</html>
