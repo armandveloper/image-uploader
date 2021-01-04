@@ -118,10 +118,13 @@ const uploadFile = async (file) => {
 	const formData = new FormData();
 	formData.append('image', file);
 	try {
-		const response = await fetch('http://localhost:3000/api/images', {
-			method: 'POST',
-			body: formData,
-		});
+		const response = await fetch(
+			'https://node-image-uploader.herokuapp.com/api/images',
+			{
+				method: 'POST',
+				body: formData,
+			}
+		);
 		const body = await response.json();
 		if (!body.ok) throw body.message;
 		showUploadedScreen(body.url);
